@@ -2,7 +2,7 @@ FROM ruby:2.5.1-stretch
 
 MAINTAINER Philipe Farias <philipefarias@gmail.com>
 
-ENV PG_DOWNLOAD_SHA256=69ec0f7414748b268b98f49653861c53125f0e2acddf931676902073e21975f5 \
+ENV PG_DOWNLOAD_SHA256=13be7053b1d8ad4e24943b24d80170574fc701b49b3f14e68a5f1bda452ce3d1 \
     GEM_HOME=/home/app/gems \
     BUNDLE_PATH=/home/app/gems \
     BUNDLE_BIN=/home/app/gems/bin \
@@ -48,7 +48,7 @@ RUN set -ex \
   && DEBIAN_FRONTEND=noninteractive apt-get -y clean \
   && rm -rf /var/lib/apt/lists/* \
   # setup postgres client libs and headers
-  && curl -sL http://ftp.postgresql.org/pub/source/v9.6.9/postgresql-9.6.9.tar.gz -o /tmp/postgresql.tar.gz \
+  && curl -sL http://ftp.postgresql.org/pub/source/v10.5/postgresql-10.5.tar.gz -o /tmp/postgresql.tar.gz \
   && echo "$PG_DOWNLOAD_SHA256 /tmp/postgresql.tar.gz" | sha256sum -c - \
   && mkdir -p /tmp/postgresql \
   && tar -xzf /tmp/postgresql.tar.gz -C /tmp/postgresql --strip-components=1 \
