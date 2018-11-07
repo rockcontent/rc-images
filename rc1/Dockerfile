@@ -1,6 +1,6 @@
 FROM ruby:2.3.7-stretch
 
-MAINTAINER Leonardo Lobo Lima <dleemoo@gmail.com>
+MAINTAINER Philipe Farias <philipefarias@gmail.com>
 
 ENV PG_DOWNLOAD_SHA256=b85275da86e23981591865ce184ea5911f77506888215b334929b818eb6bfb61 \
     GEM_HOME=/home/app/gems \
@@ -15,7 +15,7 @@ ARG GROUP=100
 ARG APP_DIR=/usr/src/app
 
 RUN set -ex \
-  # adds nodejs and yarn debian repository                                                                                                                                                                         
+  # adds nodejs and yarn debian repository
   && apt-get update \
   # update debian and install dependencies
   && DEBIAN_FRONTEND=noninteractive apt-get install -y \
@@ -33,7 +33,7 @@ RUN set -ex \
     libyaml-dev \
     zlib1g-dev \
   && echo 'deb https://deb.nodesource.com/node_8.x stretch main' > /etc/apt/sources.list.d/nodesource.list \
-  && curl -sL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \                                                                                                                               
+  && curl -sL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \
   && apt-get update \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     nodejs \

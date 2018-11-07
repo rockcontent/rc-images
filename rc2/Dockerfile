@@ -1,6 +1,6 @@
 FROM ruby:2.5.1-stretch
 
-MAINTAINER Leonardo Lobo Lima <dleemoo@gmail.com>
+MAINTAINER Philipe Farias <philipefarias@gmail.com>
 
 ENV PG_DOWNLOAD_SHA256=69ec0f7414748b268b98f49653861c53125f0e2acddf931676902073e21975f5 \
     GEM_HOME=/home/app/gems \
