@@ -1,4 +1,4 @@
-FROM ruby:2.5.1-stretch
+FROM ruby:2.6.0-stretch
 
 MAINTAINER Philipe Farias <philipefarias@gmail.com>
 
