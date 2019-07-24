@@ -1,6 +1,6 @@
 FROM ruby:2.6.2-stretch
 
-MAINTAINER Philipe Farias <philipefarias@gmail.com>
+MAINTAINER Engenharia Rock Content <engenharia@rockcontent.com>
 
 ENV PG_DOWNLOAD_SHA256=13be7053b1d8ad4e24943b24d80170574fc701b49b3f14e68a5f1bda452ce3d1 \
     GEM_HOME=/home/app/gems \
@@ -25,6 +25,7 @@ RUN set -ex \
     curl \
     git \
     imagemagick \
+    ghostscript \
     libffi-dev \
     libgdbm3 \
     libgdbm-dev \
