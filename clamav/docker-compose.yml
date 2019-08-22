@@ -1,0 +1,7 @@
+version: '3'
+services:
+  app:
+    image: rockcontent/chorus/clamav:0.1.0
+    container_name: clamav
+    volumes:
+      - ./files:/var/files
