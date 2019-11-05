@@ -35,6 +35,7 @@ RUN set -ex \
     libyaml-dev \
     python \
     zlib1g-dev \
+    tzdata \
   # adds nodejs and yarn debian repository
   && echo 'deb https://deb.nodesource.com/node_10.x jessie main' > /etc/apt/sources.list.d/nodesource.list \
   && curl -sL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \
